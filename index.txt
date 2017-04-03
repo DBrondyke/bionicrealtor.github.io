@@ -77,7 +77,7 @@ article {
 
 
 <p style="text-align:center">
-  <iframe src="http://www.grar.com/" frameborder="0" id="mainPageBody" height="400px" width="100%" ></iframe>
+  <iframe src="http://www.grar.com/" height="400px" width="100%" ></iframe>
 </p>
 </article>
 
