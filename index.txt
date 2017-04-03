@@ -59,9 +59,6 @@ article {
  <h1>Leonard Cradit - EXIT Realty Select Partners</h1>
 </header>
 
-
-<a href="https://ibb.co/irCDRF"><img src="https://preview.ibb.co/izvBDv/Lenny_Cradit.png" alt="Lenny_Cradit" border="0"></a>
-
 <nav>
   <ul>
     <li><a href="https://ibb.co/irCDRF"><img src="https://preview.ibb.co/izvBDv/Lenny_Cradit.png" alt="Lenny_Cradit" border="0" style="height:150px;width:265px;"></a></li><br>
