@@ -4,31 +4,51 @@
   <title>*Your B.I.O.N.I.C Realtor*</title>
   <meta charset="UTF-8">
 <style>
+/* THIS BEGINS THE FORM STYLE */
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #45a049;
+}
+
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+/* THIS BEGINS THE SLIDESHOW STYLE */
+
 * {box-sizing:border-box}
 body {font-family: Verdana,sans-serif;margin:0}
 .mySlides {display:none}
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-height: 500px;
+  min-height: 500px;
+  max-width: 700px;
   position: relative;
   margin: auto;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
 
 /* Position the "next button" to the right */
 .next {
@@ -41,41 +61,6 @@ body {font-family: Verdana,sans-serif;margin:0}
   background-color: rgba(0,0,0,0.8);
 }
 
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor:pointer;
-  height: 13px;
-  width: 13px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
 
 /* Fading animation */
 .fade {
@@ -96,9 +81,12 @@ body {font-family: Verdana,sans-serif;margin:0}
 }
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
+@media only screen and (max-width: 200px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+/* THIS ENDS THE SLIDESHOW STYLE */
+
 div.container {
    width: 100%;
    border: 2px solid black;
@@ -119,6 +107,12 @@ footer {
    color: white;
    font-size: 14px;
    border-top: 2px solid black;
+}
+
+aside {
+   float: right;
+   max-width: 300px;
+   margin: 0;
 }
 
 nav {
@@ -147,37 +141,6 @@ article {
 </style>
 </head>
 
-<div class="slideshow-container">
-
-<div class="mySlides fade">
-  <div class="numbertext">1 / 3</div>
-  <img src="img_nature_wide.jpg" style="width:100%">
-  <div class="text">Caption Text</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">2 / 3</div>
-  <img src="img_fjords_wide.jpg" style="width:100%">
-  <div class="text">Caption Two</div>
-</div>
-
-<div class="mySlides fade">
-  <div class="numbertext">3 / 3</div>
-  <img src="img_mountains_wide.jpg" style="width:100%">
-  <div class="text">Caption Three</div>
-</div>
-
-<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-<a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-</div>
-<br>
-
-<div style="text-align:center">
-  <span class="dot" onclick="currentSlide(1)"></span> 
-  <span class="dot" onclick="currentSlide(2)"></span> 
-  <span class="dot" onclick="currentSlide(3)"></span> 
-</div>
 
 <body style="background-color:white; text-align:center">
 <div class="container">
@@ -190,11 +153,40 @@ article {
   <ul>
     <li><a href="https://ibb.co/irCDRF"><img src="https://preview.ibb.co/izvBDv/Lenny_Cradit.png" alt="Lenny_Cradit" border="0" style="height:150px;width:265px;"></a></li><br>
     <li><b>Email Me:</b><br><a href="mailto:mybionicrealtor@gmail.com">mybionicrealtor@gmail.com</a></li><br>
-    <li><b>Call me:</b><br>616.213.2051</li>
-    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <li><b>Call Me:</b><br>616.213.2051</li><br>
+    <li><b>Facebook Me:</b><br><a href="https://www.facebook.com/leonard.cradit.5">Leonard Cradit</a></li>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
     <li><a href="https://ibb.co/eEOytv"><img src="https://preview.ibb.co/k2bJtv/EXIT_LOGO.jpg" alt="EXIT_LOGO" border="0" style="height:70px;width:140px;"></a></li>
   </ul>
 </nav>
+
+<aside>
+<div class="container">
+  <form action="/action_page.php">
+    <label for="fname">First Name</label>
+    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+    <label for="lname">Last Name</label>
+    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+    <label for="pnumber">Phone Number</label>
+    <input type="text" id="pnumber" name="phonenumber" placeholder="555.555.5555">
+
+    <label for="interest">Interested in?</label>
+    <select id="interest" name="interest">
+      <option value="buyer">Buying A Home</option>
+      <option value="seller">Selling My Home</option>
+      <option value="both">Selling & Buying A Home</option>
+      <option value="agent">Becoming An Agent</option>
+    </select>
+
+    <label for="subject">More Details</label>
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</aside>
 
 <article>
 
@@ -202,35 +194,60 @@ article {
 <p> Look no further than me, Leonard Cradit, your B.I.O.N.I.C. Realtor! </p>
 <p> Use the search below and feel free to contact me via phone or email to find out more!</p>
 
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  
+  <img src="http://cdn.resize.sparkplatform.com/ric/800x600/true/20170404133821699362000000-o.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="http://cdn.resize.sparkplatform.com/ric/800x600/true/20170129173117544446000000-o.jpg" style="width:100%">
+  
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="http://cdn.resize.sparkplatform.com/ric/800x600/true/20170325180241594432000000-o.jpg" style="width:100%">
+ 
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="http://cdn.resize.sparkplatform.com/ric/800x600/true/20170307211819871837000000-o.jpg" style="width:100%">
+ 
+</div>
+
+<div class="mySlides fade">
+  
+  <img src="http://cdn.resize.sparkplatform.com/ric/800x600/true/20160804174411227395000000-o.jpg" style="width:100%">
+ 
+</div>
+
+<br><br><br>
+
+
 <script>
-var slideIndex = 1;
-showSlides(slideIndex);
+var slideIndex = 0;
+showSlides();
 
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}    
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-      dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";  
-  dots[slideIndex-1].className += " active";
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none"; 
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1} 
+    slides[slideIndex-1].style.display = "block"; 
+    setTimeout(showSlides, 8000); // Change image every 2 seconds
 }
 </script>
 </article>
+
+
 
 <footer>
 <a href="mailto:mybionicrealtor@gmail.com">E-mail Me!</a>
